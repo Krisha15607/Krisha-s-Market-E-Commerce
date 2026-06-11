@@ -57,6 +57,15 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/ecommerce_p
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.error('MongoDB Connection Error:', err));
 
+// Health Check Route
+app.get('/', (req, res) => {
+    res.json({
+        status: '✅ Krisha Market API is Live!',
+        message: 'Backend server is running successfully.',
+        version: '1.0.0'
+    });
+});
+
 
 // ============ AUTH ROUTES ============
 
