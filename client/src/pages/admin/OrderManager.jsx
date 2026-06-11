@@ -22,7 +22,7 @@ const AdminOrders = () => {
 
     const fetchOrders = async () => {
         try {
-            const res = await axios.get('http://localhost:5001/api/admin/orders');
+            const res = await axios.get(import.meta.env.VITE_API_URL + '/api/admin/orders');
             setOrders(res.data);
         } catch (err) {
             console.error('Failed to fetch orders:', err);
@@ -64,7 +64,7 @@ const AdminOrders = () => {
     const handleBulkDelete = async () => {
         if (!window.confirm(`Are you sure you want to delete ${selectedOrders.length} selected orders? This action cannot be undone.`)) return;
         try {
-            await axios.post('http://localhost:5001/api/admin/orders/bulk-delete', { orderIds: selectedOrders });
+            await axios.post(import.meta.env.VITE_API_URL + '/api/admin/orders/bulk-delete', { orderIds: selectedOrders });
             setOrders(prev => prev.filter(o => !selectedOrders.includes(o._id)));
             setSelectedOrders([]);
             alert('Selected orders deleted successfully');

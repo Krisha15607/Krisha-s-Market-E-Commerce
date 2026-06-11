@@ -16,7 +16,7 @@ const AdminProducts = () => {
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get('http://localhost:5001/api/products');
+            const res = await axios.get(import.meta.env.VITE_API_URL + '/api/products');
             const sortedProducts = res.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             setProducts(sortedProducts);
         } catch (err) {
@@ -103,7 +103,7 @@ const AdminProducts = () => {
             if (editingId) {
                 await axios.put(`http://localhost:5001/api/products/${editingId}`, productData);
             } else {
-                await axios.post('http://localhost:5001/api/products', productData);
+                await axios.post(import.meta.env.VITE_API_URL + '/api/products', productData);
             }
             setShowModal(false);
             setEditingId(null);

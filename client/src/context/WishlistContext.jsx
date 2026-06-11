@@ -23,7 +23,7 @@ export const WishlistProvider = ({ children }) => {
     const fetchWishlist = async () => {
         try {
             const storedToken = token || localStorage.getItem('token');
-            const res = await axios.get('http://localhost:5001/api/wishlist', {
+            const res = await axios.get(import.meta.env.VITE_API_URL + '/api/wishlist', {
                 headers: { Authorization: `Bearer ${storedToken}` }
             });
             if (res.data && res.data.products) {

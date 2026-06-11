@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
     const fetchCart = async () => {
         try {
             const storedToken = token || localStorage.getItem('token');
-            const res = await axios.get('http://localhost:5001/api/cart', {
+            const res = await axios.get(import.meta.env.VITE_API_URL + '/api/cart', {
                 headers: { Authorization: `Bearer ${storedToken}` }
             });
             // Backend returns { _id, items: [{ product: {...}, quantity: 1 }] }
@@ -49,7 +49,7 @@ export const CartProvider = ({ children }) => {
         try {
             const storedToken = token || localStorage.getItem('token');
             // Optimistic update or wait for response? Let's wait for response to be safe.
-            await axios.post('http://localhost:5001/api/cart',
+            await axios.post(import.meta.env.VITE_API_URL + '/api/cart',
                 { productId: product._id, quantity: 1 },
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             );
@@ -88,7 +88,7 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = async () => {
         try {
-            await axios.delete('http://localhost:5001/api/cart', {
+            await axios.delete(import.meta.env.VITE_API_URL + '/api/cart', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setCart([]);
