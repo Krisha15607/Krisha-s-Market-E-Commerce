@@ -202,7 +202,7 @@ The application includes 4 sample products:
 
 ## 👨‍💻 Developer
 
-**Krisha Aghara**
+**Mitul Aghara**
 
 ---
 

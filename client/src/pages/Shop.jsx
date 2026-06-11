@@ -34,7 +34,7 @@ const Shop = () => {
     const fetchProducts = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(import.meta.env.VITE_API_URL + '/api/products');
+            const res = await axios.get('http://localhost:5001/api/products');
             setProducts(res.data);
             setFilteredProducts(res.data);
         } catch (err) {
