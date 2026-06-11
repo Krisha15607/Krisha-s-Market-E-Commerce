@@ -28,11 +28,11 @@ const Home = () => {
     const fetchProducts = async () => {
         try {
             setLoading(true);
-            const res = await axios.get('http://localhost:5001/api/products');
+            const res = await axios.get(import.meta.env.VITE_API_URL + '/api/products');
             if (res.data && res.data.length === 0) {
                 // If no products, try to seed or handle empty state
-                await axios.get('http://localhost:5001/api/seed');
-                const retry = await axios.get('http://localhost:5001/api/products');
+                await axios.get(import.meta.env.VITE_API_URL + '/api/seed');
+                const retry = await axios.get(import.meta.env.VITE_API_URL + '/api/products');
                 setProducts(retry.data);
                 setFeaturedProducts(retry.data.slice(0, 4)); // Show top 4 as featured
             } else {

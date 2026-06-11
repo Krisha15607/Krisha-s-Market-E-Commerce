@@ -5,7 +5,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { io } from 'socket.io-client';
 import LoadingSpinner from '../../components/LoadingSpinner';
 
-const socket = io('http://localhost:5001');
+const socket = io(import.meta.env.VITE_API_URL + '');
 
 const AdminDashboard = () => {
     const [loading, setLoading] = useState(true);
@@ -22,8 +22,8 @@ const AdminDashboard = () => {
             try {
                 setLoading(true);
                 const [productsRes, ordersRes] = await Promise.all([
-                    axios.get('http://localhost:5001/api/products'),
-                    axios.get('http://localhost:5001/api/admin/orders')
+                    axios.get(import.meta.env.VITE_API_URL + '/api/products'),
+                    axios.get(import.meta.env.VITE_API_URL + '/api/admin/orders')
                 ]);
 
                 const totalSales = ordersRes.data.reduce((acc, order) => acc + order.totalAmount, 0);
