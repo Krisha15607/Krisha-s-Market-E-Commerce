@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from './AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../config';
 
 const CartContext = createContext();
 
@@ -23,7 +24,7 @@ export const CartProvider = ({ children }) => {
     const fetchCart = async () => {
         try {
             const storedToken = token || localStorage.getItem('token');
-            const res = await axios.get('http://localhost:5001/api/cart', {
+            const res = await axios.get(`${API_URL}/api/cart`, {
                 headers: { Authorization: `Bearer ${storedToken}` }
             });
             // Backend returns { _id, items: [{ product: {...}, quantity: 1 }] }
@@ -49,7 +50,7 @@ export const CartProvider = ({ children }) => {
         try {
             const storedToken = token || localStorage.getItem('token');
             // Optimistic update or wait for response? Let's wait for response to be safe.
-            await axios.post('http://localhost:5001/api/cart',
+            await axios.post(`${API_URL}/api/cart`,
                 { productId: product._id, quantity: 1 },
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             );
@@ -64,7 +65,7 @@ export const CartProvider = ({ children }) => {
     const removeFromCart = async (productId) => {
         try {
             const storedToken = token || localStorage.getItem('token');
-            await axios.delete(`http://localhost:5001/api/cart/${productId}`, {
+            await axios.delete(`${API_URL}/api/cart/${productId}`, {
                 headers: { Authorization: `Bearer ${storedToken}` }
             });
             await fetchCart();
@@ -76,7 +77,7 @@ export const CartProvider = ({ children }) => {
     const updateQuantity = async (productId, quantity) => {
         try {
             const storedToken = token || localStorage.getItem('token');
-            await axios.put(`http://localhost:5001/api/cart/${productId}`,
+            await axios.put(`${API_URL}/api/cart/${productId}`,
                 { quantity },
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             );
@@ -88,7 +89,7 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = async () => {
         try {
-            await axios.delete('http://localhost:5001/api/cart', {
+            await axios.delete(`${API_URL}/api/cart`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setCart([]);

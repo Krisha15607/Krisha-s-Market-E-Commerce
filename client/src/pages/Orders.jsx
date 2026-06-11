@@ -7,6 +7,8 @@ import LoadingSpinner from '../components/LoadingSpinner';
 
 import { useAuth } from '../context/AuthContext';
 
+import { API_URL } from '../config';
+
 const Orders = () => {
     const [orders, setOrders] = useState([]);
     const { token } = useAuth();
@@ -43,7 +45,7 @@ const Orders = () => {
     const fetchOrders = async () => {
         try {
             setLoading(true);
-            const res = await axios.get('http://localhost:5001/api/orders', {
+            const res = await axios.get(`${API_URL}/api/orders`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setOrders(res.data);
@@ -57,7 +59,7 @@ const Orders = () => {
     const handleCancelOrder = async (orderId) => {
         if (!window.confirm("Are you sure you want to cancel this order?")) return;
         try {
-            await axios.put(`http://localhost:5001/api/orders/${orderId}/cancel`, {}, {
+            await axios.put(`${API_URL}/api/orders/${orderId}/cancel`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             alert("Order Cancelled Successfully");
