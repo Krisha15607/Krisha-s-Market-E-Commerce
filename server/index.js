@@ -18,13 +18,29 @@ const app = express();
 const server = http.createServer(app);
 
 // Middleware
-app.use(cors());
+const allowedOrigins = [
+    'https://krisha-s-market-frontend.vercel.app',
+    'https://krisha-s-market-e-commerce.vercel.app',
+    'http://localhost:5173',
+    'http://localhost:3000'
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true
+}));
 app.use(express.json());
 
 // Socket.io Setup
 const io = new Server(server, {
     cors: {
-        origin: "*", // Allow all origins for dev simplicity
+        origin: allowedOrigins,
         methods: ["GET", "POST"]
     }
 });
