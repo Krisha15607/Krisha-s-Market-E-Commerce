@@ -19,7 +19,7 @@ const server = http.createServer(app);
 
 // Middleware
 const allowedOrigins = [
-    'https://krisha-s-market-frontend.vercel.app',
+    'https://krisha-s-market.vercel.app',
     'https://krisha-s-market-e-commerce.vercel.app',
     'http://localhost:5173',
     'http://localhost:3000'
