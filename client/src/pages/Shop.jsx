@@ -6,6 +6,8 @@ import { Plus, Filter, SlidersHorizontal, Heart } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router-dom';
 import ProductSkeleton from '../components/ProductSkeleton';
 
+import { API_URL } from '../config';
+
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
@@ -34,7 +36,7 @@ const Shop = () => {
     const fetchProducts = async () => {
         try {
             setLoading(true);
-            const res = await axios.get('http://localhost:5001/api/products');
+            const res = await axios.get(`${API_URL}/api/products`);
             setProducts(res.data);
             setFilteredProducts(res.data);
         } catch (err) {

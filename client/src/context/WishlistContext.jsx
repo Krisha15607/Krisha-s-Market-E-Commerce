@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from './AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../config';
 
 const WishlistContext = createContext();
 
@@ -23,7 +24,7 @@ export const WishlistProvider = ({ children }) => {
     const fetchWishlist = async () => {
         try {
             const storedToken = token || localStorage.getItem('token');
-            const res = await axios.get('http://localhost:5001/api/wishlist', {
+            const res = await axios.get(`${API_URL}/api/wishlist`, {
                 headers: { Authorization: `Bearer ${storedToken}` }
             });
             if (res.data && res.data.products) {
@@ -42,7 +43,7 @@ export const WishlistProvider = ({ children }) => {
 
         try {
             const storedToken = token || localStorage.getItem('token');
-            await axios.post(`http://localhost:5001/api/wishlist/${product._id}`,
+            await axios.post(`${API_URL}/api/wishlist/${product._id}`,
                 {},
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             );
@@ -57,7 +58,7 @@ export const WishlistProvider = ({ children }) => {
     const removeFromWishlist = async (productId) => {
         try {
             const storedToken = token || localStorage.getItem('token');
-            await axios.delete(`http://localhost:5001/api/wishlist/${productId}`, {
+            await axios.delete(`${API_URL}/api/wishlist/${productId}`, {
                 headers: { Authorization: `Bearer ${storedToken}` }
             });
             await fetchWishlist();

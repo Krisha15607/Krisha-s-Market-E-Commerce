@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { CreditCard, Banknote, ShoppingBag, Truck } from 'lucide-react';
 import toast from 'react-hot-toast';
 
+import { API_URL } from '../config';
+
 const Checkout = () => {
     const { cart, cartTotal, clearCart } = useCart();
     const { user, token } = useAuth();
@@ -49,7 +51,7 @@ const Checkout = () => {
                 status: 'Pending'
             };
 
-            await axios.post('http://localhost:5001/api/orders', orderData, {
+            await axios.post(`${API_URL}/api/orders`, orderData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
 
