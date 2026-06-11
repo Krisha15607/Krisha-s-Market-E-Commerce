@@ -281,8 +281,8 @@ All features have been tested and verified:
 ## 📝 **User Details Integration**
 
 Your details are used in:
-- **Brand Name**: "Krisha's Market"
-- **Default User**: Krisha Aghara
+- **Brand Name**: "Mitul's Market"
+- **Default User**: Mitul Aghara
 - **Sample Data**: Your name in checkout
 - **Profile**: Pre-filled with your details
 

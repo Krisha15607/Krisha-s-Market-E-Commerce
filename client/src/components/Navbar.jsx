@@ -29,7 +29,7 @@ const Navbar = () => {
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get(import.meta.env.VITE_API_URL + '/api/products');
+            const res = await axios.get('http://localhost:5001/api/products');
             if (Array.isArray(res.data)) {
                 setAllProducts(res.data);
             }
@@ -69,7 +69,7 @@ const Navbar = () => {
                             <Menu className="w-6 h-6" />
                         </button>
                         <Link to="/" className="text-2xl font-bold text-primary flex items-center">
-                            <span className="text-dark">Krisha's</span>Market
+                            <span className="text-dark">Mitul's</span>Market
                         </Link>
                     </div>
 

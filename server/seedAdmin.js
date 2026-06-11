@@ -7,8 +7,8 @@ const seedAdmin = async () => {
         await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/ecommerce_project');
         console.log('MongoDB Connected');
 
-        const adminEmail = process.env.ADMIN_EMAIL || 'admin@krishamarket.com';
-        const adminPassword = process.env.ADMIN_PASSWORD;
+        const adminEmail = 'admin@mitulmarket.com';
+        const adminPassword = 'Aghara@2005';
 
         const existingAdmin = await User.findOne({ email: adminEmail });
         if (existingAdmin) {
@@ -17,7 +17,7 @@ const seedAdmin = async () => {
             console.log('Admin password updated successfully');
         } else {
             const admin = new User({
-                name: 'Krisha Admin',
+                name: 'Mitul Admin',
                 email: adminEmail,
                 password: adminPassword,
                 role: 'admin'
