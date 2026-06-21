@@ -49,10 +49,10 @@ const Home = () => {
     };
 
     const categories = [
-        { name: 'Electronics', icon: Smartphone, color: 'bg-blue-100 text-blue-600' },
-        { name: 'Accessories', icon: Watch, color: 'bg-purple-100 text-purple-600' },
-        { name: 'Audio', icon: Headphones, color: 'bg-pink-100 text-pink-600' },
-        { name: 'Computers', icon: Monitor, color: 'bg-orange-100 text-orange-600' },
+        { name: 'Electronics', icon: Smartphone, color: 'bg-neutral-100 text-black border border-neutral-200' },
+        { name: 'Accessories', icon: Watch, color: 'bg-neutral-100 text-black border border-neutral-200' },
+        { name: 'Audio', icon: Headphones, color: 'bg-neutral-100 text-black border border-neutral-200' },
+        { name: 'Computers', icon: Monitor, color: 'bg-neutral-100 text-black border border-neutral-200' },
     ];
 
     return (
@@ -69,7 +69,7 @@ const Home = () => {
 
                             <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-dark leading-tight">
                                 Discover the <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-neutral-500">
                                     Future of Tech
                                 </span>
                             </h1>
@@ -79,7 +79,7 @@ const Home = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-                                <a href="#products" className="bg-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-indigo-700 transition-all shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
+                                <a href="#products" className="bg-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-neutral-800 transition-all shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
                                     Start Shopping <ArrowRight className="w-5 h-5" />
                                 </a>
                                 <a href="#categories" className="bg-white text-dark px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-gray-50 transition-all border border-gray-200 shadow-sm text-center">
@@ -89,16 +89,16 @@ const Home = () => {
 
                             <div className="flex flex-wrap items-center gap-4 md:gap-6 pt-4 text-xs md:text-sm font-medium text-gray-500">
                                 <div className="flex items-center gap-2">
-                                    <CheckCircle className="w-5 h-5 text-green-500" /> Free Shipping
+                                    <CheckCircle className="w-5 h-5 text-black" /> Free Shipping
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <CheckCircle className="w-5 h-5 text-green-500" /> 30-Day Returns
+                                    <CheckCircle className="w-5 h-5 text-black" /> 30-Day Returns
                                 </div>
                             </div>
                         </div>
 
                         <div className="relative lg:h-[600px] flex items-center justify-center animate-float">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-purple-100 rounded-full blur-3xl opacity-60 transform scale-90"></div>
+                            <div className="absolute inset-0 bg-gradient-to-tr from-neutral-200 to-neutral-100 rounded-full blur-3xl opacity-60 transform scale-90"></div>
                             <img
                                 src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
                                 alt="Hero Product"
@@ -107,8 +107,8 @@ const Home = () => {
                             {/* Floating Card */}
                             <div className="absolute bottom-10 -left-4 lg:left-0 bg-white/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/40 animate-bounce-slow hidden md:block">
                                 <div className="flex items-center gap-3">
-                                    <div className="bg-green-100 p-2 rounded-full">
-                                        <TrendingUp className="w-6 h-6 text-green-600" />
+                                    <div className="bg-neutral-100 p-2 rounded-full border border-neutral-200">
+                                        <TrendingUp className="w-6 h-6 text-black" />
                                     </div>
                                     <div>
                                         <p className="font-bold text-dark">Best Seller</p>

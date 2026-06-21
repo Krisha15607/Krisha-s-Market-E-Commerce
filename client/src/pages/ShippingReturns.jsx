@@ -17,16 +17,16 @@ const ShippingReturns = () => {
                 {/* Shipping Section */}
                 <section className="bg-white rounded-xl shadow-sm p-8 mb-8">
                     <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                            <Truck className="w-5 h-5 text-blue-600" />
+                        <div className="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center border border-neutral-200">
+                            <Truck className="w-5 h-5 text-black" />
                         </div>
                         <h2 className="text-2xl font-bold text-gray-900">Shipping Policy</h2>
                     </div>
 
                     <div className="space-y-6">
-                        <div className="border-l-4 border-blue-500 pl-4 py-1 bg-blue-50 rounded-r-lg">
-                            <h3 className="font-semibold text-blue-900 mb-1">Free Shipping</h3>
-                            <p className="text-blue-700 text-sm">We offer free standard shipping on all orders over ₹999.</p>
+                        <div className="border-l-4 border-black pl-4 py-1 bg-neutral-50 rounded-r-lg">
+                            <h3 className="font-semibold text-black mb-1">Free Shipping</h3>
+                            <p className="text-neutral-700 text-sm">We offer free standard shipping on all orders over ₹999.</p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-6">
@@ -66,8 +66,8 @@ const ShippingReturns = () => {
                 {/* Returns Section */}
                 <section className="bg-white rounded-xl shadow-sm p-8">
                     <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
-                            <RefreshCw className="w-5 h-5 text-orange-600" />
+                        <div className="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center border border-neutral-200">
+                            <RefreshCw className="w-5 h-5 text-black" />
                         </div>
                         <h2 className="text-2xl font-bold text-gray-900">Return Policy</h2>
                     </div>
@@ -96,25 +96,25 @@ const ShippingReturns = () => {
                             <h3 className="font-semibold text-gray-900 mb-3">Return Eligibility</h3>
                             <ul className="space-y-2">
                                 <li className="flex items-start gap-2 text-sm text-gray-600">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-1.5 shrink-0" />
+                                    <div className="w-1.5 h-1.5 rounded-full bg-black mt-1.5 shrink-0" />
                                     Item must be unused and in original condition
                                 </li>
                                 <li className="flex items-start gap-2 text-sm text-gray-600">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-1.5 shrink-0" />
+                                    <div className="w-1.5 h-1.5 rounded-full bg-black mt-1.5 shrink-0" />
                                     Original tags and packaging must be intact
                                 </li>
                                 <li className="flex items-start gap-2 text-sm text-gray-600">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-1.5 shrink-0" />
+                                    <div className="w-1.5 h-1.5 rounded-full bg-black mt-1.5 shrink-0" />
                                     Receipt or proof of purchase is required
                                 </li>
                             </ul>
                         </div>
 
-                        <div className="flex items-start gap-3 bg-red-50 p-4 rounded-lg">
-                            <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                        <div className="flex items-start gap-3 bg-neutral-100 p-4 rounded-lg border border-neutral-200">
+                            <AlertCircle className="w-5 h-5 text-neutral-700 shrink-0 mt-0.5" />
                             <div>
-                                <h4 className="font-semibold text-red-900 text-sm mb-1">Non-Returnable Items</h4>
-                                <p className="text-red-700 text-xs">
+                                <h4 className="font-semibold text-black text-sm mb-1">Non-Returnable Items</h4>
+                                <p className="text-neutral-700 text-xs">
                                     Personal care items, digital products, and clearance items (marked as "Final Sale") are not eligible for return unless defective.
                                 </p>
                             </div>

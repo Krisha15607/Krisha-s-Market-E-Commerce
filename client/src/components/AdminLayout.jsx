@@ -18,7 +18,7 @@ const AdminLayout = () => {
         <div className="min-h-screen bg-gray-50 flex">
             {/* Mobile Header */}
             <div className="md:hidden fixed top-0 left-0 right-0 bg-dark text-white p-4 flex justify-between items-center z-50">
-                <h2 className="text-xl font-bold">Krisha's<span className="text-primary">Market</span></h2>
+                <h2 className="text-xl font-bold">Krisha's<span className="text-white">Market</span></h2>
                 <button onClick={() => setShowMobileMenu(!showMobileMenu)}>
                     {showMobileMenu ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
@@ -36,7 +36,7 @@ const AdminLayout = () => {
             <aside className={`w-64 bg-dark text-white fixed h-full z-50 transition-transform duration-300 ${showMobileMenu ? 'translate-x-0' : '-translate-x-full'
                 } md:translate-x-0 flex flex-col`}>
                 <div className="p-6 border-b border-gray-700">
-                    <h2 className="text-2xl font-bold text-white">Krisha's<span className="text-primary">Market</span></h2>
+                    <h2 className="text-2xl font-bold text-white">Krisha's<span className="text-gray-400">Market</span></h2>
                     <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Admin Dashboard</p>
                 </div>
                 <nav className="flex-1 p-4 space-y-2">
@@ -78,7 +78,7 @@ const AdminLayout = () => {
                 <div className="p-4 border-t border-gray-700">
                     <button
                         onClick={handleLogout}
-                        className="flex items-center space-x-3 text-red-400 hover:text-red-300 w-full px-4 py-2 hover:bg-red-500/10 rounded-xl transition-all"
+                        className="flex items-center space-x-3 text-gray-400 hover:text-white w-full px-4 py-2 hover:bg-gray-800 rounded-xl transition-all"
                     >
                         <LogOut className="w-5 h-5" />
                         <span>Logout</span>
@@ -104,7 +104,7 @@ const AdminLayout = () => {
                     to="/admin"
                     end
                     className={({ isActive }) =>
-                        `flex flex-col items-center space-y-1 px-4 py-2 ${isActive ? 'text-primary' : 'text-gray-400'}`
+                        `flex flex-col items-center space-y-1 px-4 py-2 ${isActive ? 'text-white' : 'text-gray-400'}`
                     }
                 >
                     <LayoutDashboard className="w-5 h-5" />
@@ -113,7 +113,7 @@ const AdminLayout = () => {
                 <NavLink
                     to="/admin/products"
                     className={({ isActive }) =>
-                        `flex flex-col items-center space-y-1 px-4 py-2 ${isActive ? 'text-primary' : 'text-gray-400'}`
+                        `flex flex-col items-center space-y-1 px-4 py-2 ${isActive ? 'text-white' : 'text-gray-400'}`
                     }
                 >
                     <Package className="w-5 h-5" />
@@ -122,7 +122,7 @@ const AdminLayout = () => {
                 <NavLink
                     to="/admin/orders"
                     className={({ isActive }) =>
-                        `flex flex-col items-center space-y-1 px-4 py-2 ${isActive ? 'text-primary' : 'text-gray-400'}`
+                        `flex flex-col items-center space-y-1 px-4 py-2 ${isActive ? 'text-white' : 'text-gray-400'}`
                     }
                 >
                     <ShoppingCart className="w-5 h-5" />

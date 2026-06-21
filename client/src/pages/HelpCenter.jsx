@@ -49,22 +49,22 @@ const HelpCenter = () => {
                 {/* Topic Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                     <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group text-center">
-                        <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors">
-                            <Package className="w-6 h-6 text-blue-600" />
+                        <div className="w-12 h-12 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-neutral-200 transition-colors">
+                            <Package className="w-6 h-6 text-black" />
                         </div>
                         <h3 className="text-lg font-semibold mb-2">Orders & Delivery</h3>
                         <p className="text-gray-500 text-sm">Track packages, edit orders, shipping info</p>
                     </div>
                     <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group text-center">
-                        <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-100 transition-colors">
-                            <CreditCard className="w-6 h-6 text-green-600" />
+                        <div className="w-12 h-12 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-neutral-200 transition-colors">
+                            <CreditCard className="w-6 h-6 text-black" />
                         </div>
                         <h3 className="text-lg font-semibold mb-2">Payments & Refunds</h3>
                         <p className="text-gray-500 text-sm">Payment methods, status, refund processing</p>
                     </div>
                     <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group text-center">
-                        <div className="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-100 transition-colors">
-                            <RefreshCw className="w-6 h-6 text-purple-600" />
+                        <div className="w-12 h-12 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-neutral-200 transition-colors">
+                            <RefreshCw className="w-6 h-6 text-black" />
                         </div>
                         <h3 className="text-lg font-semibold mb-2">Returns & Exchanges</h3>
                         <p className="text-gray-500 text-sm">Return policies, exchange process</p>
@@ -107,7 +107,7 @@ const HelpCenter = () => {
                             <Mail className="w-5 h-5" />
                             Email Support
                         </button>
-                        <button className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm">
+                        <button className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-neutral-800 transition-colors shadow-sm">
                             <MessageCircle className="w-5 h-5" />
                             Chat with Us
                         </button>

@@ -100,7 +100,7 @@ const AuthModal = ({ isOpen, onClose, mode: initialMode = 'login' }) => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full bg-gradient-to-r from-primary to-indigo-600 text-white py-4 rounded-xl font-bold hover:shadow-lg transition-all disabled:opacity-50"
+                        className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-neutral-800 hover:shadow-lg transition-all disabled:opacity-50"
                     >
                         {loading ? 'Please wait...' : mode === 'login' ? 'Login' : 'Create Account'}
                     </button>

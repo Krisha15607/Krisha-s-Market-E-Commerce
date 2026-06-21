@@ -19,6 +19,7 @@ const server = http.createServer(app);
 
 // Middleware
 const allowedOrigins = [
+    'https://krisha-market.vercel.app',
     'https://krisha-s-market.vercel.app',
     'https://krisha-s-market-e-commerce.vercel.app',
     'http://localhost:5173',
@@ -27,7 +28,7 @@ const allowedOrigins = [
 
 app.use(cors({
     origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
+        if (!origin || allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));

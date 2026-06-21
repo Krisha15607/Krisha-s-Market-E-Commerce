@@ -52,21 +52,21 @@ const Profile = () => {
                                     <img
                                         src={user.avatar}
                                         alt={user?.name}
-                                        className="w-32 h-32 rounded-full border-4 border-primary object-cover"
+                                        className="w-32 h-32 rounded-full border-4 border-black object-cover"
                                     />
                                 ) : (
-                                    <UserAvatar name={user?.name} className="w-32 h-32 text-5xl border-4 border-primary" />
+                                    <UserAvatar name={user?.name} className="w-32 h-32 text-5xl border-4 border-black" />
                                 )}
-                                <div className="absolute bottom-0 right-0 bg-green-500 w-6 h-6 rounded-full border-4 border-white"></div>
+                                <div className="absolute bottom-0 right-0 bg-black w-6 h-6 rounded-full border-4 border-white"></div>
                             </div>
                             <h2 className="text-2xl font-bold text-dark mb-1">{user?.name}</h2>
                             <p className="text-gray-500 mb-4">{user?.email}</p>
-                            <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-bold inline-block">
+                            <div className="bg-black text-white px-4 py-2 rounded-full text-sm font-bold inline-block">
                                 {user?.role === 'admin' ? 'Admin' : 'Customer'}
                             </div>
                         </div>
 
-                        <div className="bg-gradient-to-br from-primary to-indigo-600 rounded-2xl p-6 text-white">
+                        <div className="bg-black rounded-2xl p-6 text-white">
                             <h3 className="font-bold mb-2">Member Since</h3>
                             <p className="text-sm opacity-90">
                                 {new Date(user?.createdAt).toLocaleDateString('en-US', {
@@ -86,7 +86,7 @@ const Profile = () => {
                                 {!isEditing ? (
                                     <button
                                         onClick={() => setIsEditing(true)}
-                                        className="flex items-center space-x-2 text-primary hover:text-indigo-700 font-medium"
+                                        className="flex items-center space-x-2 text-black hover:text-neutral-700 font-medium"
                                     >
                                         <Edit2 className="w-4 h-4" />
                                         <span>Edit</span>
@@ -94,7 +94,7 @@ const Profile = () => {
                                 ) : (
                                     <button
                                         onClick={handleCancel}
-                                        className="flex items-center space-x-2 text-red-500 hover:text-red-700 font-medium"
+                                        className="flex items-center space-x-2 text-neutral-600 hover:text-black font-medium"
                                     >
                                         <X className="w-4 h-4" />
                                         <span>Cancel</span>
@@ -165,7 +165,7 @@ const Profile = () => {
                                     <button
                                         type="submit"
                                         disabled={loading}
-                                        className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 flex items-center justify-center space-x-2"
+                                        className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-neutral-800 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 flex items-center justify-center space-x-2"
                                     >
                                         <Save className="w-5 h-5" />
                                         <span>{loading ? 'Saving...' : 'Save Changes'}</span>
@@ -178,10 +178,10 @@ const Profile = () => {
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
                             <div className="flex items-center justify-between mb-6">
                                 <h3 className="text-xl font-bold text-dark flex items-center gap-3">
-                                    <Heart className="w-6 h-6 text-red-500 fill-current" />
+                                    <Heart className="w-6 h-6 text-black fill-current" />
                                     My Wishlist
                                 </h3>
-                                <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold">
+                                <span className="bg-black text-white px-3 py-1 rounded-full text-sm font-bold">
                                     {wishlist.length} items
                                 </span>
                             </div>
@@ -190,7 +190,7 @@ const Profile = () => {
                                 <div className="text-center py-12">
                                     <ShoppingBag className="w-16 h-16 mx-auto text-gray-300 mb-4" />
                                     <p className="text-gray-400 mb-4">Your wishlist is empty</p>
-                                    <Link to="/shop" className="text-primary hover:text-indigo-700 font-semibold">
+                                    <Link to="/shop" className="text-black hover:text-neutral-700 font-semibold">
                                         Browse Products →
                                     </Link>
                                 </div>
@@ -200,7 +200,7 @@ const Profile = () => {
                                         <Link
                                             key={item._id}
                                             to={`/product/${item._id}`}
-                                            className="group flex gap-4 p-4 border border-gray-100 rounded-xl hover:shadow-md hover:border-primary/30 transition-all"
+                                            className="group flex gap-4 p-4 border border-gray-100 rounded-xl hover:shadow-md hover:border-black/30 transition-all"
                                         >
                                             <img
                                                 src={item.image || item.images?.[0]}
@@ -208,7 +208,7 @@ const Profile = () => {
                                                 className="w-20 h-20 object-cover rounded-lg"
                                             />
                                             <div className="flex-1">
-                                                <h4 className="font-semibold text-dark group-hover:text-primary transition line-clamp-1">
+                                                <h4 className="font-semibold text-dark group-hover:text-black transition line-clamp-1">
                                                     {item.name}
                                                 </h4>
                                                 <p className="text-xs text-gray-400 mb-2">{item.category}</p>

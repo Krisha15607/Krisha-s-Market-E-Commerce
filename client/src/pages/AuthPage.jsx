@@ -54,7 +54,7 @@ const AuthPage = () => {
                                     name="name"
                                     type="text"
                                     required
-                                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-black focus:border-black focus:z-10 sm:text-sm"
                                     placeholder="Full Name"
                                     value={formData.name}
                                     onChange={handleChange}
@@ -68,7 +68,7 @@ const AuthPage = () => {
                                 name="email"
                                 type="email"
                                 required
-                                className={`appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 ${isLogin ? 'rounded-t-md' : ''} focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm`}
+                                className={`appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 ${isLogin ? 'rounded-t-md' : ''} focus:outline-none focus:ring-black focus:border-black focus:z-10 sm:text-sm`}
                                 placeholder="Email address"
                                 value={formData.email}
                                 onChange={handleChange}
@@ -81,7 +81,7 @@ const AuthPage = () => {
                                 name="password"
                                 type="password"
                                 required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-black focus:border-black focus:z-10 sm:text-sm"
                                 placeholder="Password"
                                 value={formData.password}
                                 onChange={handleChange}
@@ -94,7 +94,7 @@ const AuthPage = () => {
                     <div>
                         <button
                             type="submit"
-                            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 transform hover:scale-105"
+                            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-all duration-300 transform hover:scale-105"
                         >
                             {isLogin ? 'Sign in' : 'Sign up'}
                         </button>
@@ -102,7 +102,7 @@ const AuthPage = () => {
                 </form>
                 <div className="text-center">
                     <button
-                        className="text-indigo-600 hover:text-indigo-500 font-medium"
+                        className="text-black hover:text-neutral-700 font-medium"
                         onClick={() => setIsLogin(!isLogin)}
                     >
                         {isLogin ? 'Need an account? Sign up' : 'Already have an account? Sign in'}

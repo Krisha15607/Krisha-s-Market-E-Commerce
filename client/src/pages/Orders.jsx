@@ -83,9 +83,9 @@ const Orders = () => {
                                 <div className="flex items-center space-x-3 mb-2">
                                     <Package className="text-primary w-5 h-5" />
                                     <span className="font-bold text-dark">Order #{order._id.slice(-6).toUpperCase()}</span>
-                                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${order.status === 'Pending' ? 'bg-yellow-100 text-yellow-600' :
-                                        order.status === 'Cancelled' ? 'bg-red-100 text-red-600' :
-                                            order.status === 'Completed' ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600'
+                                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${order.status === 'Pending' ? 'bg-neutral-100 text-neutral-800 border border-neutral-200' :
+                                        order.status === 'Cancelled' ? 'bg-neutral-100 text-neutral-400 line-through border border-neutral-200' :
+                                            order.status === 'Completed' ? 'bg-black text-white' : 'bg-neutral-100 text-neutral-600 border border-neutral-200'
                                         }`}>
                                         {order.status}
                                     </span>

@@ -37,7 +37,7 @@ const Cart = () => {
                 </div>
                 <h2 className="text-3xl font-bold text-gray-400 mb-2">Your Cart is Empty</h2>
                 <p className="text-gray-400 mb-8">Looks like you haven't added anything yet.</p>
-                <a href="/" className="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-indigo-700 transition">
+                <a href="/" className="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-neutral-800 transition">
                     Start Shopping
                 </a>
             </div>
@@ -109,7 +109,7 @@ const Cart = () => {
                             </div>
                             <div className="flex justify-between text-gray-600">
                                 <span>Shipping</span>
-                                <span className="font-semibold text-green-600">FREE</span>
+                                <span className="font-semibold text-black">FREE</span>
                             </div>
                             <div className="flex justify-between text-gray-600">
                                 <span>Tax (GST 18%)</span>
@@ -124,7 +124,7 @@ const Cart = () => {
 
                         <button
                             onClick={handleCheckout}
-                            className="w-full bg-gradient-to-r from-primary to-indigo-600 text-white py-4 rounded-xl font-bold hover:shadow-xl transition-all mb-4"
+                            className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-neutral-800 hover:shadow-xl transition-all mb-4"
                         >
                             Proceed to Checkout
                         </button>

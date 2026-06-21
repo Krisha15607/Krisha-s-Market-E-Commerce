@@ -128,7 +128,7 @@ const AdminProducts = () => {
                 <h1 className="text-2xl md:text-3xl font-bold text-dark">Product Management</h1>
                 <button
                     onClick={openAddModal}
-                    className="bg-primary text-white px-4 md:px-6 py-2 md:py-3 rounded-xl flex items-center space-x-2 hover:bg-indigo-700 transition w-full sm:w-auto justify-center"
+                    className="bg-black text-white px-4 md:px-6 py-2 md:py-3 rounded-xl flex items-center space-x-2 hover:bg-neutral-800 transition w-full sm:w-auto justify-center"
                 >
                     <Plus className="w-5 h-5" />
                     <span>Add Product</span>
@@ -165,8 +165,8 @@ const AdminProducts = () => {
                                 <td className="p-6 font-bold text-dark">₹{product.price}</td>
                                 <td className="p-6 text-sm text-gray-600">{product.stock}</td>
                                 <td className="p-6 text-right space-x-2">
-                                    <button onClick={() => handleEdit(product)} className="text-blue-500 hover:bg-blue-50 p-2 rounded-lg"><Edit2 className="w-4 h-4" /></button>
-                                    <button onClick={() => handleDelete(product._id)} className="text-red-500 hover:bg-red-50 p-2 rounded-lg"><Trash2 className="w-4 h-4" /></button>
+                                    <button onClick={() => handleEdit(product)} className="text-black hover:bg-neutral-100 border border-transparent hover:border-neutral-200 p-2 rounded-lg inline-flex items-center"><Edit2 className="w-4 h-4" /></button>
+                                    <button onClick={() => handleDelete(product._id)} className="text-neutral-500 hover:text-black hover:bg-neutral-100 border border-transparent hover:border-neutral-200 p-2 rounded-lg inline-flex items-center"><Trash2 className="w-4 h-4" /></button>
                                 </td>
                             </tr>
                         ))}
@@ -196,8 +196,8 @@ const AdminProducts = () => {
                                 <p className="font-bold text-dark">{product.stock}</p>
                             </div>
                             <div className="flex gap-2">
-                                <button onClick={() => handleEdit(product)} className="text-blue-500 hover:bg-blue-50 p-2 rounded-lg"><Edit2 className="w-4 h-4" /></button>
-                                <button onClick={() => handleDelete(product._id)} className="text-red-500 hover:bg-red-50 p-2 rounded-lg"><Trash2 className="w-4 h-4" /></button>
+                                <button onClick={() => handleEdit(product)} className="text-black hover:bg-neutral-100 border border-neutral-200 p-2 rounded-lg"><Edit2 className="w-4 h-4" /></button>
+                                <button onClick={() => handleDelete(product._id)} className="text-neutral-500 hover:text-black hover:bg-neutral-100 border border-neutral-200 p-2 rounded-lg"><Trash2 className="w-4 h-4" /></button>
                             </div>
                         </div>
                     </div>
@@ -215,7 +215,7 @@ const AdminProducts = () => {
                         <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                             <div>
                                 <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Product Name</label>
-                                <input required type="text" className="w-full p-2 sm:p-3 text-sm sm:text-base border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} />
+                                <input required type="text" className="w-full p-2 sm:p-3 text-sm sm:text-base border border-gray-200 rounded-xl focus:ring-2 focus:ring-black/20 focus:border-black outline-none" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} />
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                                 <div>
@@ -243,7 +243,7 @@ const AdminProducts = () => {
                                 <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Specifications <span className="text-xs text-gray-400">(One per line, format: Key: Value)</span></label>
                                 <textarea className="w-full p-2 sm:p-3 text-sm sm:text-base border border-gray-200 rounded-xl outline-none" rows="4" value={formData.specifications} onChange={e => setFormData({ ...formData, specifications: e.target.value })} placeholder="Brand: Nike&#10;Material: Leather&#10;Weight: 1.2 kg&#10;Dimensions: 24 x 12 x 5 cm"></textarea>
                             </div>
-                            <button type="submit" className="w-full bg-primary text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-indigo-700 transition sticky bottom-0">{editingId ? 'Update Product' : 'Save Product'}</button>
+                            <button type="submit" className="w-full bg-black text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-neutral-800 transition sticky bottom-0">{editingId ? 'Update Product' : 'Save Product'}</button>
                         </form>
                     </div>
                 </div>

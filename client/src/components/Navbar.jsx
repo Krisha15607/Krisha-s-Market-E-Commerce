@@ -182,7 +182,7 @@ const Navbar = () => {
                                         {user?.role === 'admin' && (
                                             <Link
                                                 to="/admin"
-                                                className="flex items-center space-x-2 px-4 py-2 hover:bg-indigo-50 text-primary font-bold"
+                                                className="flex items-center space-x-2 px-4 py-2 hover:bg-neutral-100 text-primary font-bold"
                                                 onClick={() => setShowUserMenu(false)}
                                             >
                                                 <LayoutDashboard className="w-4 h-4" />
@@ -203,7 +203,7 @@ const Navbar = () => {
                         ) : (
                             <button
                                 onClick={() => setShowAuthModal(true)}
-                                className="flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition"
+                                className="flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-full hover:bg-neutral-800 transition"
                             >
                                 <User className="w-5 h-5" />
                                 <span className="hidden lg:block">Login</span>

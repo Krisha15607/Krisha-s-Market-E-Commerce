@@ -150,7 +150,7 @@ const ProductDetail = () => {
                                     toast.success(`${product.name} added to cart!`);
                                 }}
                                 disabled={product.stock === 0}
-                                className="flex-1 bg-primary text-white py-4 px-8 rounded-2xl font-bold text-lg hover:bg-indigo-700 shadow-xl shadow-primary/30 transform hover:-translate-y-1 transition-all flex items-center justify-center gap-3 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:shadow-none"
+                                className="flex-1 bg-primary text-white py-4 px-8 rounded-2xl font-bold text-lg hover:bg-neutral-800 shadow-xl shadow-primary/30 transform hover:-translate-y-1 transition-all flex items-center justify-center gap-3 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:shadow-none"
                             >
                                 <ShoppingBag className="w-6 h-6" />
                                 {product.stock === 0 ? 'Sold Out' : 'Add to Cart'}
@@ -169,7 +169,7 @@ const ProductDetail = () => {
                         {/* Features */}
                         <div className="grid grid-cols-2 gap-4">
                             <div className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-50 shadow-sm">
-                                <div className="p-2 bg-green-100 rounded-lg text-green-600">
+                                <div className="p-2 bg-neutral-100 rounded-lg text-black border border-neutral-200">
                                     <Truck className="w-5 h-5" />
                                 </div>
                                 <div>
@@ -178,7 +178,7 @@ const ProductDetail = () => {
                                 </div>
                             </div>
                             <div className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-50 shadow-sm">
-                                <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
+                                <div className="p-2 bg-neutral-100 rounded-lg text-black border border-neutral-200">
                                     <Shield className="w-5 h-5" />
                                 </div>
                                 <div>

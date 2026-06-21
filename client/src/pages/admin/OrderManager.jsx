@@ -77,11 +77,11 @@ const AdminOrders = () => {
 
     const getStatusColor = (status) => {
         switch (status) {
-            case 'Pending': return 'bg-yellow-100 text-yellow-600';
-            case 'Processing': return 'bg-blue-100 text-blue-600';
-            case 'Shipped': return 'bg-purple-100 text-purple-600';
-            case 'Delivered': return 'bg-green-100 text-green-600';
-            default: return 'bg-gray-100 text-gray-600';
+            case 'Pending': return 'bg-neutral-100 text-neutral-800 border border-neutral-300';
+            case 'Processing': return 'bg-neutral-200 text-neutral-800 border border-neutral-400';
+            case 'Shipped': return 'bg-neutral-800 text-white';
+            case 'Delivered': return 'bg-black text-white';
+            default: return 'bg-neutral-100 text-neutral-500';
         }
     };
 
@@ -92,7 +92,7 @@ const AdminOrders = () => {
                 {selectedOrders.length > 0 && (
                     <button
                         onClick={handleBulkDelete}
-                        className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors shadow-sm"
+                        className="bg-black hover:bg-neutral-800 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors shadow-sm"
                     >
                         <Trash2 className="w-5 h-5" />
                         Delete {selectedOrders.length} Selected
@@ -106,7 +106,7 @@ const AdminOrders = () => {
                         type="checkbox"
                         checked={selectedOrders.length === orders.length}
                         onChange={handleSelectAll}
-                        className="w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary"
+                        className="w-5 h-5 rounded border-gray-300 text-black focus:ring-black accent-black"
                     />
                     <span className="font-medium text-gray-600">Select All Orders</span>
                 </div>
@@ -114,14 +114,14 @@ const AdminOrders = () => {
 
             <div className="space-y-4">
                 {orders.map((order) => (
-                    <div key={order._id} className={`bg-white p-4 md:p-6 rounded-xl border shadow-sm transition-all ${selectedOrders.includes(order._id) ? 'border-primary ring-1 ring-primary' : 'border-gray-100'}`}>
+                    <div key={order._id} className={`bg-white p-4 md:p-6 rounded-xl border shadow-sm transition-all ${selectedOrders.includes(order._id) ? 'border-black ring-1 ring-black' : 'border-gray-100'}`}>
                         <div className="flex flex-col md:flex-row justify-between md:items-center mb-4 md:mb-6 border-b border-gray-100 pb-4">
                             <div className="flex items-start gap-4">
                                 <input
                                     type="checkbox"
                                     checked={selectedOrders.includes(order._id)}
                                     onChange={() => toggleSelectOrder(order._id)}
-                                    className="mt-1.5 w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary"
+                                    className="mt-1.5 w-5 h-5 rounded border-gray-300 text-black focus:ring-black accent-black"
                                 />
                                 <div>
                                     <div className="flex flex-wrap items-center gap-2 mb-1">
@@ -139,7 +139,7 @@ const AdminOrders = () => {
                                     <select
                                         value={order.status}
                                         onChange={(e) => handleStatusUpdate(order._id, e.target.value)}
-                                        className="appearance-none bg-gray-50 border border-gray-200 text-gray-700 py-2 pl-4 pr-8 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer"
+                                        className="appearance-none bg-gray-50 border border-gray-200 text-gray-700 py-2 pl-4 pr-8 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-black/20 cursor-pointer"
                                     >
                                         <option value="Pending">Pending</option>
                                         <option value="Processing">Processing</option>
@@ -150,7 +150,7 @@ const AdminOrders = () => {
                                 </div>
                                 <button
                                     onClick={() => handleDeleteOrder(order._id)}
-                                    className="p-2 rounded-lg border border-red-200 text-red-600 hover:bg-red-50 transition-colors"
+                                    className="p-2 rounded-lg border border-neutral-200 text-neutral-500 hover:text-black hover:bg-neutral-100 transition-colors"
                                     title="Delete Order"
                                 >
                                     <Trash2 className="w-5 h-5" />

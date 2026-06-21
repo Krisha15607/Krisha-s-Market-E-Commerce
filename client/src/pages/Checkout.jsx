@@ -78,7 +78,7 @@ const Checkout = () => {
                     <p className="text-gray-500 mb-8">Add some amazing products to get started!</p>
                     <button
                         onClick={() => navigate('/shop')}
-                        className="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-indigo-700 transition"
+                        className="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-neutral-800 transition"
                     >
                         Continue Shopping
                     </button>
@@ -158,7 +158,7 @@ const Checkout = () => {
                                             }`}>
                                             {paymentMethod === 'cod' && <div className="w-3 h-3 rounded-full bg-primary"></div>}
                                         </div>
-                                        <Banknote className="w-8 h-8 text-green-600" />
+                                        <Banknote className="w-8 h-8 text-black" />
                                         <div className="flex-1">
                                             <h3 className="font-bold text-dark">Cash on Delivery</h3>
                                             <p className="text-sm text-gray-500">Pay when you receive your order</p>
@@ -186,7 +186,7 @@ const Checkout = () => {
                                         <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center border-gray-300`}>
                                             <div className="w-3 h-3 rounded-full bg-gray-200"></div>
                                         </div>
-                                        <CreditCard className="w-8 h-8 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                                        <CreditCard className="w-8 h-8 text-gray-400 group-hover:text-black transition-colors" />
                                         <div className="flex-1">
                                             <div className="flex items-center gap-2">
                                                 <h3 className="font-bold text-gray-500">Online Payment</h3>
@@ -231,7 +231,7 @@ const Checkout = () => {
                                 </div>
                                 <div className="flex justify-between text-gray-600">
                                     <span>Delivery</span>
-                                    <span className="font-semibold text-green-600">FREE</span>
+                                    <span className="font-semibold text-black">FREE</span>
                                 </div>
                             </div>
 
@@ -245,7 +245,7 @@ const Checkout = () => {
                             <button
                                 onClick={handlePlaceOrder}
                                 disabled={loading || !address.trim()}
-                                className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-neutral-800 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {loading ? 'Processing...' : `Place Order - ₹${grandTotal}`}
                             </button>
