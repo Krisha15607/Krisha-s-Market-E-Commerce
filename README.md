@@ -1,10 +1,10 @@
 # 🛍️ Krisha's Market - Premium E-Commerce Experience
 
 [![Status](https://img.shields.io/badge/Status-Ultra--Attractive-brightgreen)](https://github.com/Krisha15607/Krisha-s-Market-E-Commerce)
-[![Live Demo](https://img.shields.io/badge/Demo-Live-blue)](https://krisha-s-market.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-blue)](https://krisha-market.vercel.app/)
 
 ### 🌐 Project Links
-* **Live Preview :** https://krisha-s-market.vercel.app/
+* **Live Preview :** https://krisha-market.vercel.app/
 * **Backend :** https://krisha-s-market-e-commerce.vercel.app/
 
 Welcome to **Krisha's Market**, a high-end, full-stack e-commerce platform designed for a premium shopping experience. Featuring an ultra-attractive UI, real-time interactions, and a seamless checkout flow.
