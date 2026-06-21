@@ -6,7 +6,12 @@ import { io } from 'socket.io-client';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import { API_URL, SOCKET_URL } from '../../config';
 
-const socket = io(SOCKET_URL);
+const isProduction = import.meta.env.PROD;
+const socket = io(SOCKET_URL, {
+    autoConnect: !isProduction,
+    reconnection: !isProduction,
+    reconnectionAttempts: isProduction ? 0 : 5
+});
 
 const AdminDashboard = () => {
     const [loading, setLoading] = useState(true);
