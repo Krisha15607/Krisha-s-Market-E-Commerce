@@ -10,19 +10,19 @@ const Footer = () => {
                     {/* Brand Section */}
                     <div className="space-y-6">
                         <Link to="/" className="text-3xl font-bold flex items-center gap-2">
-                            <span className="text-primary">Mitul's</span>Market
+                            <span className="text-primary">Krisha's</span>Market
                         </Link>
                         <p className="text-gray-400 leading-relaxed text-sm">
                             Your premium destination for quality tech and lifestyle products. We believe in quality, style, and exceptional service.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="https://github.com/mitulaghara" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all duration-300 group">
+                            <a href="https://github.com/krishapanchotiya" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all duration-300 group">
                                 <Github className="w-5 h-5 text-gray-400 group-hover:text-white" />
                             </a>
-                            <a href="https://www.instagram.com/mitul_aghara/" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-all duration-300 group">
+                            <a href="https://www.instagram.com/krisha_panchotiya/" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-all duration-300 group">
                                 <Instagram className="w-5 h-5 text-gray-400 group-hover:text-white" />
                             </a>
-                            <a href="https://www.linkedin.com/in/mitul-aghara-602a72332/" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition-all duration-300 group">
+                            <a href="https://www.linkedin.com/in/krisha-panchotiya-602a72332/" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition-all duration-300 group">
                                 <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-white" />
                             </a>
                         </div>
@@ -94,10 +94,10 @@ const Footer = () => {
                 <div className="border-t border-gray-800 pt-8 mt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-gray-500 text-sm">
-                            © {new Date().getFullYear()} Mitul's Market. All rights reserved.
+                            © {new Date().getFullYear()} Krisha's Market. All rights reserved.
                         </p>
                         <p className="flex items-center gap-1 text-gray-500 text-sm">
-                            Designed with <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" /> by Mitul's Market
+                            Designed with <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" /> by Krisha's Market
                         </p>
                     </div>
                 </div>
